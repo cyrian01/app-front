@@ -1,12 +1,15 @@
 import Container from "./components/Container"
 import Header from "./components/Header"
+import Hero from "./components/Hero"
+import TodoTable from "./components/TodoTable"
 
 function App() {
 
   return (
     <>
+      <Header />
       <Container>
-        <Header />
+        <Hero />
         <h1 className="text-2xl text-gray-500">On va apprendre ensemble, <span className="text-gray-600 text-3xl">Javascript</span> ECM6 et Reactjs</h1>
         <button className="bg-blue-500 
                           text-white 
@@ -18,6 +21,7 @@ function App() {
                           transition-colors 
                           duration-300">Let's Start</button>
       </Container>
+      <TodoTable />
     </>
   )
 }

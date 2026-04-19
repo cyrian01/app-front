@@ -1,29 +1,24 @@
-import Container from "./components/Container"
-import Header from "./components/Header"
-import Hero from "./components/Hero"
-import TodoTable from "./components/TodoTable"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import Projects from "./pages/Projects";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
-
   return (
-    <>
+    <Router>
       <Header />
-      <Container>
-        <Hero />
-        <h1 className="text-2xl text-gray-500">On va apprendre ensemble, <span className="text-gray-600 text-3xl">Javascript</span> ECM6 et Reactjs</h1>
-        <button className="bg-blue-500 
-                          text-white 
-                          px-4 
-                          py-2 
-                          rounded 
-                          mt-4 
-                          hover:bg-blue-600 
-                          transition-colors 
-                          duration-300">Let's Start</button>
-      </Container>
-      <TodoTable />
-    </>
-  )
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

@@ -1,18 +1,46 @@
 import React from "react";
-import {FaHome} from "react-icons/fa"
+import { Link } from "react-router-dom";
+import { FaHome } from "react-icons/fa";
 
 const Header: React.FC = () => {
   return (
     <>
       <header className="flex mx-auto max-w-7xl items-center justify-between p-4 bg-gray-800 text-white">
-        <div className="flex items-center gap-1 font-bold"><FaHome /> Logo</div>
-        <div className="flex space-x-4 hover:cursor-pointer">
-            <span className="hover:text-orange-500 hover:underline">Home</span>
-            <span className="hover:text-orange-500 hover:underline">Services</span>
-            <span className="hover:text-orange-500 hover:underline">Projects</span>
-            <span className="hover:text-orange-500 hover:underline">About</span>
-            <span className="hover:text-orange-500 hover:underline">Contact</span>
-        </div>
+        <Link to="/" className="flex items-center gap-1 font-bold hover:text-orange-500 transition-colors">
+          <FaHome /> Logo
+        </Link>
+        <nav className="flex space-x-4 hover:cursor-pointer">
+          <Link
+            to="/"
+            className="hover:text-orange-500 hover:underline transition-colors"
+          >
+            Home
+          </Link>
+          <Link
+            to="/services"
+            className="hover:text-orange-500 hover:underline transition-colors"
+          >
+            Services
+          </Link>
+          <Link
+            to="/projects"
+            className="hover:text-orange-500 hover:underline transition-colors"
+          >
+            Projects
+          </Link>
+          <Link
+            to="/about"
+            className="hover:text-orange-500 hover:underline transition-colors"
+          >
+            About
+          </Link>
+          <Link
+            to="/contact"
+            className="hover:text-orange-500 hover:underline transition-colors"
+          >
+            Contact
+          </Link>
+        </nav>
       </header>
     </>
   );

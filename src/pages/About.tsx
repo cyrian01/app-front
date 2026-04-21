@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import Container from "../components/Container";
 
 export default function About() {
+  useEffect(() => {
+    document.title = "About - E-Learning";
+  }, []);
+
   return (
     <Container>
       <div className="max-w-4xl">

@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import Container from "../components/Container";
 import Hero from "../components/Hero";
 import TodoTable from "../components/TodoTable";
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "Home - E-Learning";
+  }, []);
+
   return (
     <div>
       <Container>

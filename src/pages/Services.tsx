@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import Container from "../components/Container";
 
 export default function Services() {
+  useEffect(() => {
+    document.title = "Services - E-Learning";
+  }, []);
+
   const services = [
     {
       id: 1,

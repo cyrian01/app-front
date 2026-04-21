@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import Container from "../components/Container";
 
 export default function Projects() {
+  useEffect(() => {
+    document.title = "Projects - E-Learning";
+  }, []);
+
   const projects = [
     {
       id: 1,

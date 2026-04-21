@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Container from "../components/Container";
 
 export default function Contact() {
+  useEffect(() => {
+    document.title = "Contact - E-Learning";
+  }, []);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
